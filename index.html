@@ -8,8 +8,8 @@
     <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0; url=https://ihorozov.netlify.app" />
     <meta name="google-site-verification" content="jdsIvoprZffILl68FvUBFXxIQDEFO-ac0c3Z4Zq4Zg0" />
+    <meta http-equiv="refresh" content="0; url=https://ihorozov.netlify.app" />
 
  </head>
 
@@ -22,6 +22,10 @@ body {
     margin-bottom: 30px;
     background-color: bisque;
 }
+
+#delayed-text {
+      display: none; /* Скрит по подразбиране */
+    }
  
 @media only screen and (max-width: 600px) {
     body {
@@ -37,7 +41,14 @@ body {
     <h1 style="font-family: 'Merriweather'; font-style: oblique;  text-align: center; color:#2a2b2b; font-size: 50px;">Иван Хорозов</h1>
     <hr style="height:1px; border-width: 0; color:black; background-color:black">
 
-    <p style="text-align: center; color:#2a2b2b; font-family: 'Merriweather'; font-size: medium; letter-spacing: 1px; margin-bottom: 20px;">Ако не бъдете пренасочени, <a href="https://ihorozov.netlify.app" style="color: #2a2b2b;">натиснете тук.</a></p>
+    <p style="text-align: center; color:#2a2b2b; font-family: 'Merriweather'; font-size: medium; letter-spacing: 1px; margin-bottom: 20px;" id="delayed-text">Ако не бъдете пренасочени, <a href="https://ihorozov.netlify.app" style="color: #2a2b2b;">натиснете тук.</a></p>
+
+
+    <script>
+
+      window.addEventListener('load', function () {setTimeout(function () {document.getElementById('delayed-text').style.display = 'block';}, 2000);});
+
+    </script>
 
   </body>
 
